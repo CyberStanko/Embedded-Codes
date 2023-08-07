@@ -1,0 +1,12 @@
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  int sensorValue = analogRead(A0);
+  sensorValue=sensorValue*.48;
+  Serial.print("TEMPERATURE = ");
+  Serial.print(sensorValue);
+  Serial.println(" C");
+  delay(1000);
+}
